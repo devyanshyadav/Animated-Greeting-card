@@ -1,0 +1,113 @@
+
+			/* Use shorthand for margin and padding */
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			/* Use multiple font families */
+			body {
+        overflow:hidden;
+				background-color: #2E3840;
+				font-family: 'PT Sans', sans-serif;
+			}
+			main {
+				height: 100vh;
+				width: 100vw;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.curve {
+				position: absolute;
+				left: 0;
+				top: 0px;
+				right: 0;
+				height: 70px;
+				width: 155px;
+				background-color: #BE2724;
+				border-radius: 0 0 100px 100px;
+				border: 2px solid red;
+				z-index: 1000;
+				box-shadow: 0px 15px 15px -3px rgba(0, 0, 0, 0.1);
+				transition: transform 0.5s ease, top 0.5s ease, 0.5s ease;
+			}
+			.big-div:hover .curve {
+				transform: rotateX(160deg);
+				top: -65px;
+				z-index: -10;
+			}
+			.big-div:hover .card {
+				animation: pop-up 1.5s 1 forwards;
+			}
+			@keyframes pop-up {
+				0% {
+					bottom: 0px;
+				}
+				100% {
+					bottom: 190px;
+				}
+			}
+			.big-div {
+				position: absolute;
+				height: 200px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 160px;
+				border-radius: 3px;
+				background-color: red;
+			}
+			.card {
+				position: absolute;
+				font-size: 13px;
+				color: white;
+				height: 150px;
+				width: 125px;
+				border-radius: 3px;
+				background: rgba(249, 217, 73, 0.81);
+				border: 1px solid rgba(249, 217, 73, 0.3);
+				box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+				backdrop-filter: blur(5.8px);
+				-webkit-backdrop-filter: blur(5.8px);
+				z-index: 100;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+			.small-div {
+				box-shadow: inset 0px 32px 15px -3px rgba(0, 0, 0, 0.1);
+				position: absolute;
+				top: 0;
+				height: 200px;
+				width: 160px;
+				border-radius: 3px;
+				background-color: red;
+				z-index: 100;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.small-div-1 {
+				height: 180px;
+				width: 140px;
+				border-radius: 3px;
+				background-color: red;
+				border: 2px dashed #BE2724;
+				display: flex;
+				justify-content: center;
+			}
+			.small-div-1 .mid-line {
+				height: 178px;
+				width: 0px;
+				border: 2px dashed #BE2724;
+			}
+			/* Use a separate class for the image */
+			.card img {
+				width: 100px;
+        pointer-events:none;
+			}
+			/* Use a separate class for the font family */
+			.card span {
+				font-family: 'Roboto Condensed', sans-serif;
+			}
